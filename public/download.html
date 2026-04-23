@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download</title>
+  <style>
+    #guide {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="guide" src="/download.png"
+    style="position:absolute;top: 0;left: 0;width: 100%;background-color: #141414;display: none;" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var isWechat = navigator.userAgent.indexOf('MicroMessenger') > 0;
+      var guideEle = document.getElementById('guide');
+
+      if (isWechat) {
+        guideEle.style.display = 'block';
+        window.scrollTo(0, 0);
+      } else {
+        window.location.href = 'https://apps.apple.com/us/app/albatross-wealth-management/id6504000854';
+      }
+    });
+  </script>
+</body>
+
+</html>

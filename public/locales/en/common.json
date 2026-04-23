@@ -1,0 +1,39 @@
+{
+  "home": "Home",
+  "blog": "Blog",
+  "text_content": {
+    "first": "Reflecting on the centuries-long history of modern financial development, we are compelled to recognize it as the pinnacle of human ingenuity. Modern finance, founded on hope and credit, has created a vast market system that underpins the operations of the entire world. We can liken it to a vast ocean—majestic and captivating, yet ever-changing and unpredictable, filled with boundless opportunities and risks. Historical experience teaches us that wisdom and experience are the most reliable safeguards, with experience being particularly valuable, often acquired through the cost of failure and error.",
+    "second": "In today's era, leveraging big data and artificial intelligence, we can analyze and share experiences to an unprecedented extent, enabling investors at different stages and from various backgrounds to gain insights into the market through AI. Through continuous communication and learning, investors can bridge the known and the unknown, expanding the boundaries of wisdom, reducing risks, and avoiding blind and uninformed trading.",
+    "third": "Wisdom and intelligence, the known and the unknown—this is ATROS®, your prudent and optimistic investment partner, and a smart tool for learning and growth."
+  },
+  "text_dollar": {
+    "title": "COMPREHENSIVE MARKET COVERAGE",
+    "content": "Our wealth management service offers unparalleled access to a wide range of investment opportunities including fixed income, stocks, bonds, ETFs, commodities, REITs, cryptocurrencies, and other alternative investments. Diversify your portfolio with confidence and seize opportunities across global markets."
+  },
+  "text_stock": {
+    "title": "TAILOR-MADE ALLOCATIONS",
+    "content": "Recognizing that no two individuals have the same financial situation, we customize investment strategies and allocations to suit your unique needs. Whether based on your occupation, lifestyle, or financial goals, our personalized approach ensures your portfolio is perfectly aligned with your objectives."
+  },
+  "text_lake": {
+    "title": "TOP-TIER RESEARCH TEAM",
+    "content": "Benefit from the expertise of our founders, who bring over a decade of experience in banking and tech from leading institutions such as McKinsey, Goldman Sachs, Bloomberg, and Meta. Our elite research team is available 24/7, ready to respond to your needs with immediate research and analysis on demand, ensuring your investments are guided by the latest insights and expert analysis."
+  },
+  "text_graham": {
+    "title": "AI FINANCIAL ADVISOR \"GRAHAM\"",
+    "content": "Meet Graham, our in-app AI assistant who outperforms human advisors. Whether you have questions about market performance, earnings, economic events, personal tax assistance, or need help with depositing or withdrawing funds, Graham is available 24/7 to provide you with accurate and timely answers. Just reach out to Graham for all your financial needs and enjoy the convenience of instant, expert assistance.",
+    "subContent": "+To honor Benjamin Graham's contributions to modern finance, we have named part of our artificial intelligence system \"Graham.\""
+  },
+  "text_bird": {
+    "title": "EXCLUSIVE INVESTMENT OPPORTUNITIES",
+    "content": "Leveraging our founders' extensive industry experience, we offer unparalleled access to exclusive venture capital deals, including elite investments like X.AI and SpaceX by Elon Musk, Claude by Google, and OpenAI by Sam Altman. Our alternative investment opportunities extend beyond the VC market, encompassing prime real estate and rare collector's items. Most importantly, we present our proprietary flagship fund, exclusively available to high-net-worth clients, providing access to the most coveted investment prospects."
+  },
+  "text_founders": {
+    "title": "MEET OUR FOUNDERS",
+    "first": "We are Mao Cheng, Simo Wu, and Zhuo Chen—a team committed to making wealth management smarter, more accessible, and built for the modern investor. With backgrounds at McKinsey, Goldman Sachs, TikTok, and Meta, we blend finance and technology to create investment strategies that thrive in today's dynamic market.",
+    "second": "Educated at Fudan University, Tongji University, and UC Berkeley, with two PhDs among us, we combine deep academic rigor with real-world expertise. This unique foundation enables us to navigate investments with precision, balancing risk and opportunity to drive meaningful results.",
+    "third": "Beyond traditional strategies, our extensive network in venture capital grants access to exclusive startup opportunities—the kind that rarely reach the public eye. From fintech and AI to groundbreaking innovations, we connect our clients with investments that have real potential.",
+    "fourth": "At our core, we believe wealth management should be strategic, transparent, and tailored to your goals—without unnecessary complexity. Let's build something great, together."
+  },
+  "selected_venture": "Selected Venture Capital Deals",
+  "read_more": "READMORE"
+}

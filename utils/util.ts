@@ -1,0 +1,1 @@
+export const calculateVW = (px: number, baseWidth: number) => `[${(px / baseWidth) * 100}vw]`;

@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Helvetica Now Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/HelveticaNowDisplay.otf') format('opentype');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Helvetica Now Display';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/HelveticaNowDisplayIt.otf') format('opentype');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Helvetica Now Display';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/HelveticaNowDisplayMedium.otf') format('opentype');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Helvetica Now Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/HelveticaNowDisplayBold.otf') format('opentype');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Helvetica Now Display';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/HelveticaNowDisplayXBold.otf') format('opentype');
+    font-display: swap;
+  }
+
+
+  @font-face {
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/NotoSansSC-Regular.ttf') format('truetype');
+    font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Noto Sans SC';
+      font-style: italic;
+      font-weight: 400;
+      src: url('/fonts/NotoSansSC-Regular.ttf') format('truetype');
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Noto Sans SC';
+      font-style: normal;
+      font-weight: 500;
+      src: url('/fonts/NotoSansSC-Medium.ttf') format('truetype');
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Noto Sans SC';
+      font-style: normal;
+      font-weight: 700;
+      src: url('/fonts/NotoSansSC-Bold.ttf') format('truetype');
+      font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'Noto Sans SC';
+      font-style: normal;
+      font-weight: 800;
+      src: url('/fonts/NotoSansSC-ExtraBold.ttf') format('truetype');
+      font-display: swap;
+  }
+    
+  html {
+    touch-action: pan-y;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    font-family:
+      'Helvetica Now Display', /* 英文默认字体 */
+      'Noto Sans SC', /* 中文默认字体 */
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      'Noto Sans',
+      sans-serif,
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol',
+      'Noto Color Emoji';
+  }
+
+  /* 中文内容使用中文字体 */
+  :lang(zh_cn) {
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+  :lang(zh_cn).font-normal { line-height: 1.5; font-weight: 300; }
+  :lang(zh_cn).font-medium { line-height: 1.5; font-weight: 400; }
+  :lang(zh_cn).font-bold { line-height: 1.5; font-weight: 500; }
+  :lang(zh_cn).font-xbold { line-height: 1.5; font-weight: 700; }
+  /* 欢迎深入了解 ATROS®，探索我们为您提供的专业服务(md) */
+  :lang(zh_cn).font-xbold-normal { font-weight: 700; line-height: 1.2; }
+  /* 中文标题 走近我们的创始人 欢迎深入了解 ATROS®，探索我们为您提供的专业服务(xl lg)*/
+  :lang(zh_cn).font-xbold-tight { font-weight: 700; line-height: 1.0;}
+
+  /* 英文内容使用英文字体 */
+  :lang(en) {
+    font-family: 'Helvetica Now Display', sans-serif;
+  }
+  :lang(en).font-normal { line-height: 1.2; font-weight: 400; }
+  :lang(en).font-medium { line-height: 1.2; font-weight: 500; }
+  :lang(en).font-bold { line-height: 1.0; font-weight: 700; }
+  :lang(en).font-xbold { line-height: 1.0; font-weight: 800; }
+  /* 英文标题 MEET OUR FOUNDERS & WISDOM & INTELLIGENCE */
+  :lang(en).font-xbold-tight { font-weight: 800; line-height: 0.8;
+  }
+
+}
