@@ -1,5 +1,5 @@
-import Tag from './Tag';
-import SmallTag from './SmallTag';
+import Tag from '@/ui/Tag';
+import SmallTag from '@/ui/SmallTag';
 import Image from 'next/image';
 import { PostType } from '@/services';
 import { useI18n } from '@/components/I18nContext';

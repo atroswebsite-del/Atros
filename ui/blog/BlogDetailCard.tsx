@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import Tag from './Tag';
+import Tag from '@/ui/Tag';
 import { ComponentProps } from 'react';
 import { PostType } from '@/services';
 

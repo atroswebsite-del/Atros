@@ -33,6 +33,9 @@
       "@/utils/*": [
         "utils/*"
       ],
+      "@/hooks/*": [
+        "hooks/*"
+      ],
       "@/assets/*": [
         "assets/*"
       ],

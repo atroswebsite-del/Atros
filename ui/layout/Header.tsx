@@ -85,7 +85,7 @@ const Header = () => {
         <div className="flex flex-row space-x-[20px]">
           <LanguageSwitcher />
           <Button type={0} href={`/blog`}>
-            Blog
+            MARC SAYS
           </Button>
         </div>
       </header>

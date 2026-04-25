@@ -42,7 +42,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             type={0}
             href="/blog"
           >
-            Blog
+            MARC SAYS
           </Button>
           <Button
             type={1}

@@ -77,11 +77,11 @@ const Button: React.FC<ButtonProps> = ({
       <Link lang='en' className={`text-[30px] xl:text-[25px] lg:text-[25px] md:text-md-18 
                              font-bold  text-gray-1 
                              rounded-50 border border-gray-0
-                             flex items-center justify-center
-                             w-[185px] h-[50px] 
-                             xl:w-[155px] xl:h-[40px] 
-                             lg:w-[155px] lg:h-[40px] 
-                             md:w-md-90 md:h-md-30
+                             flex items-center justify-center whitespace-nowrap
+                             w-[240px] h-[50px] 
+                             xl:w-[200px] xl:h-[40px] 
+                             lg:w-[200px] lg:h-[40px] 
+                             md:w-[min(90vw,280px)] md:h-md-30
                              ${className}`}
         href={href}
       >
