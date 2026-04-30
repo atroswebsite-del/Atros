@@ -35,5 +35,9 @@
     "fourth": "At our core, we believe wealth management should be strategic, transparent, and tailored to your goals—without unnecessary complexity. Let's build something great, together."
   },
   "selected_venture": "Selected Venture Capital Deals",
-  "read_more": "READMORE"
+  "read_more": "READMORE",
+  "logo_tagline": {
+    "line1": "WISDOM & INTELLIGENCE THE",
+    "line2": "KNOWN & THE UNKNOWN"
+  }
 }

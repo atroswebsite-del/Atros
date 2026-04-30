@@ -13,7 +13,7 @@ export default function HomeBirdCta() {
                       aspect-[1920/779] xl:aspect-[990/779] lg:aspect-[990/971] md:aspect-[375/425]
                       h-[779px] xl:h-[779px] lg:h-[971px] md:h-md-425"
     >
-      <Image src="/home_bird.jpg" alt="" fill className="object-cover" />
+      <Image src="/home_bird.png" alt="" fill className="object-cover" sizes="100vw" />
       <div className="hidden lg:flex md:flex relative w-full mx-auto flex-col items-center">
         <IconAtrosGreen
           className="lg:w-[160px] lg:h-[160px] lg:mt-[240px] 

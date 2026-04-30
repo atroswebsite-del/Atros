@@ -10,6 +10,8 @@ import HomeServicesSection from '@/ui/home/HomeServicesSection';
 import { useHeroScene } from '@/hooks/useHeroScene';
 import { usePointerTrail } from '@/hooks/usePointerTrail';
 
+// Hero：`useHeroScene()` = heroViewRef + createHeroView(…, isPhone) + isLoaded（原页内 useRef/useEffect 已抽到 hook）
+
 export default function Home() {
   const { heroViewRef, isLoaded } = useHeroScene();
   usePointerTrail();
