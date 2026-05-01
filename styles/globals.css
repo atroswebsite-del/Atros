@@ -80,9 +80,14 @@
       font-display: swap;
   }
     
+  body {
+    max-width: 100%;
+  }
+
   html {
     touch-action: pan-y;
     overflow-x: hidden;
+    max-width: 100%;
     -webkit-tap-highlight-color: transparent;
     font-family:
       'Helvetica Now Display', /* 英文默认字体 */

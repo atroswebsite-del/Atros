@@ -17,13 +17,17 @@ export default function Home() {
   usePointerTrail();
 
   return (
-    <div className="">
+    <div className="w-full max-w-full overflow-x-hidden">
       <Header />
-      <div ref={heroViewRef} id="hero-view" className="flex relative cursor-none w-full h-full" />
+      <div
+        ref={heroViewRef}
+        id="hero-view"
+        className="relative flex min-h-[100dvh] w-full max-w-full cursor-none overflow-x-hidden"
+      />
 
       {isLoaded && (
         <>
-          <div className="w-full mx-auto px-[30px] xl:px-[30px] lg:px-[30px] md:px-md-16">
+          <div className="mx-auto w-full max-w-full px-[30px] xl:px-[30px] lg:px-[30px] md:px-md-16">
             <HomeIntroHeadline />
             <HomeServicesSection />
             <HomeFoundersSection />

@@ -17,13 +17,12 @@ export function createHeroView(container: HTMLElement, isPhone: boolean = false)
   scene.background = new THREE.Color(0xEAEAEA);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, depth: true });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.domElement.style.display = 'block';
+  renderer.domElement.style.maxWidth = '100%';
 
   container.appendChild(renderer.domElement);
 
-  const camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 0.1, 2000);
-
+  const camera = new THREE.PerspectiveCamera(10, 1, 0.1, 2000);
 
   camera.position.set(0, 0, window.innerWidth >= 430 ? 10.5 : 18);
 
@@ -47,24 +46,44 @@ export function createHeroView(container: HTMLElement, isPhone: boolean = false)
   // const [points] = createTestParticles();
   const [planePoints, pointMaterial] = createPlaneParticle({ xCount: isPhone ? 48 : 65, yCount: isPhone ? 48 : 50 });
 
+  const readViewportHeight = () =>
+    window.visualViewport?.height ?? window.innerHeight;
+
+  const updateSize = () => {
+    const cw = Math.max(1, Math.floor(container.clientWidth || window.innerWidth));
+    const ch = Math.max(
+      1,
+      Math.floor(container.clientHeight || readViewportHeight()),
+    );
+    const pr = Math.min(window.devicePixelRatio || 1, 2);
+    renderer.setPixelRatio(pr);
+    renderer.setSize(cw, ch, false);
+    camera.aspect = cw / ch;
+    camera.updateProjectionMatrix();
+    renderRect = renderer.domElement.getBoundingClientRect();
+    pointMaterial.uniforms.uPixelRatio.value = window.devicePixelRatio || 1;
+  };
+
+  updateSize();
+
   const animate = () => {
     const elapse = clock.getDelta();
     pointMaterial.uniforms.uTime.value += elapse;
     //controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
     renderer.render(scene, camera);
-  }
+  };
 
   const onWindowResize = () => {
-    renderRect = renderer.domElement.getBoundingClientRect();
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    pointMaterial.uniforms.uPixelRatio.value = window.devicePixelRatio;
-  }
+    updateSize();
+  };
 
   window.addEventListener('resize', onWindowResize);
+  window.visualViewport?.addEventListener('resize', onWindowResize);
 
+  const ro = new ResizeObserver(() => {
+    updateSize();
+  });
+  ro.observe(container);
 
   const raycaster = new THREE.Raycaster();
   const interactPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1));

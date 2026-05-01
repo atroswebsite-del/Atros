@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import IconAtrosGreen from '@/assets/atros-logo-green.svg';
 import IconStars from '@/assets/stars.svg';
-import IconAppstore from '@/assets/appstore.svg';
 
 export default function HomeBirdCta() {
   return (
@@ -55,7 +54,6 @@ export default function HomeBirdCta() {
           <br />
           <span className="">2024 ATROS ®</span>
         </div>
-        <IconAppstore className="lg:w-[166px] lg:h-[48px] md:w-md-116 md:h-md-33 lg:mt-[55px] md:mt-md-24" />
       </div>
     </div>
   );
