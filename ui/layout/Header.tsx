@@ -57,12 +57,17 @@
 
 
 "use client"
+import { useState } from 'react';
 import IconAtros from '@/assets/atros-logo.svg'
+import IconHamburger from '@/assets/hamburger.svg'
 import Link from 'next/link'
 import Button from '@/ui/Button';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Modal from '@/ui/Modal';
 
 const Header = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       {/* Header头部 LOGO absolute 头部固定用它 fixed z-[999]*/}
@@ -76,19 +81,25 @@ const Header = () => {
                                 lg:w-[140px] lg:h-[30px] 
                                 md:w-md-93 md:h-md-20"/>
         </Link>
-        {/* <span className="text-gray-0">
-          <span className="xl:hidden">Default</span>
-          <span className="hidden xl:inline lg:hidden">XL</span>
-          <span className="hidden lg:inline md:hidden">LG</span>
-          <span className="hidden md:inline">MD</span>
-        </span> */}
-        <div className="flex flex-row space-x-[20px]">
+
+        {/* 桌面端：语言切换 + MARC SAYS */}
+        <div className="flex flex-row space-x-[20px] md:hidden">
           <LanguageSwitcher />
           <Button type={0} href={`/blog`}>
             MARC SAYS
           </Button>
         </div>
+
+        {/* 手机端：汉堡菜单按钮 */}
+        <button
+          className="hidden md:flex items-center justify-center"
+          onClick={() => setIsModalOpen(true)}
+        >
+          <IconHamburger className="md:w-md-40 md:h-md-40" />
+        </button>
       </header>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 };
