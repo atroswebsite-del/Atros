@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { PostType } from '@/services';
 import BlogCard from '@/ui/blog/BlogCard';
 import BlogDetailCard from '@/ui/blog/BlogDetailCard';
+import IconClose from '@/assets/close.svg';
 
 type Props = {
   posts: PostType[];
@@ -25,11 +26,25 @@ export default function BlogListMobile({ posts }: Props) {
                       pt-[226px]"
     >
       {posts.map((post, index) => (
-        <div key={post.slug} onClick={() => handlePostClick(index)} className="cursor-pointer">
+        <div key={post.slug}>
           {selectedPostIndex === index ? (
-            <BlogDetailCard {...post} />
+            <div>
+              {/* 关闭按钮 */}
+              <div className="flex justify-end mb-[16px] lg:mb-[12px] md:mb-md-10">
+                <button
+                  onClick={() => setSelectedPostIndex(null)}
+                  className="flex items-center justify-center"
+                  aria-label="关闭"
+                >
+                  <IconClose className="w-[40px] h-[40px] lg:w-[40px] lg:h-[40px] md:w-md-40 md:h-md-40" />
+                </button>
+              </div>
+              <BlogDetailCard {...post} />
+            </div>
           ) : (
-            <BlogCard {...post} />
+            <div onClick={() => handlePostClick(index)} className="cursor-pointer">
+              <BlogCard {...post} />
+            </div>
           )}
         </div>
       ))}
