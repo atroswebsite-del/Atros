@@ -24,7 +24,7 @@ export function createHeroView(container: HTMLElement, isPhone: boolean = false)
 
   const camera = new THREE.PerspectiveCamera(10, 1, 0.1, 2000);
 
-  camera.position.set(0, 0, window.innerWidth >= 430 ? 10.5 : 18);
+  camera.position.set(0, 0, window.innerWidth >= 430 ? 10.5 : 13);
 
   // controls
 
@@ -44,7 +44,7 @@ export function createHeroView(container: HTMLElement, isPhone: boolean = false)
 
   // world
   // const [points] = createTestParticles();
-  const [planePoints, pointMaterial] = createPlaneParticle({ xCount: isPhone ? 48 : 65, yCount: isPhone ? 48 : 50 });
+  const [planePoints, pointMaterial] = createPlaneParticle({ xCount: isPhone ? 60 : 65, yCount: isPhone ? 56 : 50 });
 
   const readViewportHeight = () =>
     window.visualViewport?.height ?? window.innerHeight;
@@ -55,7 +55,7 @@ export function createHeroView(container: HTMLElement, isPhone: boolean = false)
       1,
       Math.floor(container.clientHeight || readViewportHeight()),
     );
-    const pr = Math.min(window.devicePixelRatio || 1, 2);
+    const pr = Math.min(window.devicePixelRatio || 1, 3);
     renderer.setPixelRatio(pr);
     renderer.setSize(cw, ch, false);
     camera.aspect = cw / ch;
@@ -89,26 +89,35 @@ export function createHeroView(container: HTMLElement, isPhone: boolean = false)
   const interactPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1));
 
 
-  if (!isPhone) {
-    renderer.domElement.addEventListener('pointermove', (event) => {
-      if (event.isPrimary === false) return;
-      const e = event;
-      const normalizeX = ((e.clientX - renderRect.left) / renderRect.width) * 2 - 1;
-      const normalizeY = -((e.clientY - renderRect.top) / renderRect.height) * 2 + 1;
-      raycaster.setFromCamera(new THREE.Vector2(normalizeX, normalizeY), camera);
-      const targetPoint = new THREE.Vector3();
-      raycaster.ray.intersectPlane(interactPlane, targetPoint);
-      pointMaterial.uniforms.uMouse.value = targetPoint;
+  const handlePointer = (clientX: number, clientY: number) => {
+    const normalizeX = ((clientX - renderRect.left) / renderRect.width) * 2 - 1;
+    const normalizeY = -((clientY - renderRect.top) / renderRect.height) * 2 + 1;
+    raycaster.setFromCamera(new THREE.Vector2(normalizeX, normalizeY), camera);
+    const targetPoint = new THREE.Vector3();
+    raycaster.ray.intersectPlane(interactPlane, targetPoint);
+    pointMaterial.uniforms.uMouse.value = targetPoint;
 
-      const rotateX = Math.PI * easeOutQuad(normalizeX) / 8;
-      const rotateY = Math.PI * easeOutQuad(normalizeY) / 6;
-      const x = 10.0 * Math.sin(rotateX);
-      const y = rotateY * 8.0 //camera.position.y;
-      const z = 10.0 * Math.cos(rotateX);
-      logo.lookAt(new THREE.Vector3(x, y * 0.5, z));
-      planePoints.lookAt(new THREE.Vector3(x * 0.5, y * 0.2, z));
-    }, { passive: true });
-  }
+    if (!logo) return;
+    const rotateX = Math.PI * easeOutQuad(normalizeX) / 8;
+    const rotateY = Math.PI * easeOutQuad(normalizeY) / 6;
+    const x = 10.0 * Math.sin(rotateX);
+    const y = rotateY * 8.0;
+    const z = 10.0 * Math.cos(rotateX);
+    logo.lookAt(new THREE.Vector3(x, y * 0.5, z));
+    planePoints.lookAt(new THREE.Vector3(x * 0.5, y * 0.2, z));
+  };
+
+  renderer.domElement.addEventListener('pointermove', (event) => {
+    if (event.isPrimary === false) return;
+    handlePointer(event.clientX, event.clientY);
+  }, { passive: true });
+
+  // 触摸设备：滑动时也驱动交互
+  renderer.domElement.addEventListener('touchmove', (event) => {
+    const t = event.touches[0];
+    if (!t) return;
+    handlePointer(t.clientX, t.clientY);
+  }, { passive: true });
 
   const loader = new GLTFLoader().setPath('models/')
   loader.load('logo_test.gltf', async (gltf) => {
