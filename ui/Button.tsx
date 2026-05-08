@@ -63,6 +63,7 @@ interface ButtonProps {
   href: string;
   children: React.ReactNode;
   className?: string; // 外部传入控制样式
+  onClick?: () => void;
 }
 
 // Blog Download 按钮
@@ -71,6 +72,7 @@ const Button: React.FC<ButtonProps> = ({
   href,
   children,
   className,
+  onClick,
 }) => {
   return (
     type === 0 ? (
@@ -84,6 +86,7 @@ const Button: React.FC<ButtonProps> = ({
                              md:w-[min(90vw,280px)] md:h-md-30
                              ${className}`}
         href={href}
+        onClick={onClick}
       >
         {children}
       </Link>
@@ -98,6 +101,7 @@ const Button: React.FC<ButtonProps> = ({
                              md:w-md-180 md:h-md-45
                              ${className}`}
         href={href}
+        onClick={onClick}
       >
         {children}
       </Link>
