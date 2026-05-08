@@ -31,18 +31,17 @@ export default function BlogPostPage() {
       <div className="w-full mx-auto px-[30px] xl:px-[30px] lg:px-[30px] md:px-md-16">
         <Header />
         {!isLoading && post && (
-          <div className="pt-[226px] xl:pt-[190px] lg:pt-[190px] md:pt-[140px]">
-            {/* 关闭按钮 */}
-            <div className="flex justify-end mb-[16px] md:mb-md-10">
+          <div className="pt-[226px] xl:pt-[190px] lg:pt-[190px] md:pt-[140px] relative">
+            <div className="relative max-w-[1440px] mx-auto">
               <button
                 onClick={() => router.push('/blog')}
                 aria-label="返回列表"
-                className="flex items-center justify-center"
+                className="absolute top-[30px] right-[30px] xl:top-[20px] xl:right-[20px] md:top-md-16 md:right-md-16 z-10 flex items-center justify-center"
               >
-                <IconClose className="w-[40px] h-[40px] md:w-md-40 md:h-md-40" />
+                <IconClose className="w-[32px] h-[32px] md:w-md-30 md:h-md-30" />
               </button>
+              <BlogDetailCard {...post} />
             </div>
-            <BlogDetailCard {...post} />
           </div>
         )}
         {!isLoading && !post && (
