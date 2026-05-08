@@ -1,10 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { PostType } from '@/services';
 import BlogCard from '@/ui/blog/BlogCard';
 import BlogDetailCard from '@/ui/blog/BlogDetailCard';
-import IconClose from '@/assets/close.svg';
 
 type Props = {
   posts: PostType[];
@@ -12,10 +11,21 @@ type Props = {
 
 export default function BlogListMobile({ posts }: Props) {
   const [selectedPostIndex, setSelectedPostIndex] = useState<number | null>(null);
+  const expandedRef = useRef<HTMLDivElement>(null);
 
-  const handlePostClick = (index: number) => {
-    setSelectedPostIndex((current) => (current === index ? null : index));
-  };
+  // 点击文章外部区域时收起
+  useEffect(() => {
+    if (selectedPostIndex === null) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (expandedRef.current && !expandedRef.current.contains(event.target as Node)) {
+        setSelectedPostIndex(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [selectedPostIndex]);
 
   return (
     <div
@@ -28,21 +38,11 @@ export default function BlogListMobile({ posts }: Props) {
       {posts.map((post, index) => (
         <div key={post.slug}>
           {selectedPostIndex === index ? (
-            <div>
-              {/* 关闭按钮 */}
-              <div className="flex justify-end mb-[16px] lg:mb-[12px] md:mb-md-10">
-                <button
-                  onClick={() => setSelectedPostIndex(null)}
-                  className="flex items-center justify-center"
-                  aria-label="关闭"
-                >
-                  <IconClose className="w-[40px] h-[40px] lg:w-[40px] lg:h-[40px] md:w-md-40 md:h-md-40" />
-                </button>
-              </div>
+            <div ref={expandedRef}>
               <BlogDetailCard {...post} />
             </div>
           ) : (
-            <div onClick={() => handlePostClick(index)} className="cursor-pointer">
+            <div onClick={() => setSelectedPostIndex(index)} className="cursor-pointer">
               <BlogCard {...post} />
             </div>
           )}
