@@ -28,8 +28,8 @@ export function useBlogPosts(locale: Locale) {
       .then((res) => res.json())
       .then((data: PostType[]) => {
         if (cancelled) return;
-        const sized = withCardSize(data);
-        setPosts(filterByLocale(sized, locale));
+        const filtered = filterByLocale(data, locale);
+        setPosts(withCardSize(filtered));
         setIsLoading(false);
       })
       .catch((error) => {
