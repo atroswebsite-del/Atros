@@ -1,5 +1,35 @@
 [
   {
+    "title": "那不勒斯奶昔",
+    "date": "June 30, 2026",
+    "slug": "16",
+    "author": {
+      "name": "ATROS W.M.",
+      "position": "首席创意官",
+      "company": "ATROS®",
+      "picture": ""
+    },
+    "coverImage": "/blog/june-2026-illustration.png",
+    "excerpt": "就像它名字所取自的那款甜点，六月带着满满一桶各色滋味如约而至——三种截然不同的口味叠在同一个容器里，彼此之间界限分明，并不融合。那就一勺一勺来品。",
+    "content": "# 那不勒斯奶昔\n\n就像它名字所取自的那款甜点，六月带着满满一桶各色滋味如约而至——三种截然不同的口味叠在同一个容器里，彼此之间界限分明，并不融合。那就一勺一勺来品。\n\n![](/blog/june-2026-illustration.png)\n\n## 第一勺：美联储\n\n六月的 FOMC 会议，几乎是咄咄逼人的平静——不加息、不降息、没有新闻，更重要的是，没有担当。所谓\"没有担当\"，是指沃什主席明确表示，前瞻指引在他任内已经画上句号，未来美联储的沟通将刻意保持克制。这不禁让人想起格林斯潘？格林斯潘是谁？没错——正是这个意思。那是上个世纪的事了。\n\n我不加掩饰地说：我完全不赞同这一改革。那套\"让市场自行寻找效率\"的老派央行哲学，根本无法映射到我们实际所处的时代。今日市场的复杂程度，比\"以晦涩为智慧\"的格林斯潘年代高出整整一个量级——更具反身性、杠杆更高、对每一个音节的反应都更加敏锐。切断沟通纽带、美其名曰\"纪律\"，是假设市场已经做好了迎接新丛林的准备。对此，我毫无把握。\n\n## 第二勺：数据\n\nCPI 和 PCE 双双略低于预期——幅度谈不上戏剧性，但足以给室内降一些温度。加息大合唱，可以预见地，又开始热身了。我高度怀疑这会成真。如果加息真的在桌面上，我不认为它会在中期选举前落地。有些歌，只有在选票数完之后才会开口唱。\n\n## 第三勺：仓位\n\n这才是六月真正交出成绩单的地方。\n\n$NOK 给了我们等待已久的那波拉升，我们兑现了利润——然后立刻重新买回。我们认为这个标的在 7 月 23 日财报发布后具备重估潜力。数学并不复杂：即便在第一张 AI-RAN 订单入账之前，$NOK 的 P/E 也应当至少达到 $CIEN 的一半。目前它还没到，而这个缺口，就是这笔交易的逻辑所在。\n\n$ORCL 则截然相反，经历了一个糟糕的月份——事实上是自互联网泡沫破裂以来最惨烈的一个月，走势极其难看。为什么？因为所有人都憎恨稀释，而甲骨文给了市场一份 200 亿美元的股权发行来消化。但让我们来捋一捋，而不是条件反射地回避。他们为什么不断稀释？这才是真正的关键。你不会为了踟蹰不前而募集这种规模的资金；你募集，是因为眼前的建设规模太大、合同锁定太深，任何其他融资方式都无法承载。所有人退避三舍的稀释，读对了其实是一个关于机遇体量的信号。我们继续持有 $ORCL 多头，并在下跌中完成建仓。我们认为这接近于一个完美的长期入场点——而且应当受益于日益向 $IGV 软件复合体倾斜的再平衡顺风。\n\n## 甜点\n\n我预计独立日行情会大致按惯例如期而至，就像往常一样——毕竟季末和大部分再平衡压力已经过去。不过七月剩余的时间，读起来像一个真正的谜。我的基础预期是下半年磨砺式的上行趋势——那种我们在 2021 年经历过的、两步向上、一步后退的攀爬。方向向上，但过程不会平顺。\n\n系好安全带。\n\n—— Atros W.M.\n\n> ## © ATROS TECH INC.\n",
+    "lang": "zh_cn"
+  },
+  {
+    "title": "Neapolitan Shake",
+    "date": "June 30, 2026",
+    "slug": "15",
+    "author": {
+      "name": "ATROS W.M.",
+      "position": "Chief Creative Officer",
+      "company": "ATROS®",
+      "picture": ""
+    },
+    "coverImage": "/blog/june-2026-illustration.png",
+    "excerpt": "Like the dessert it’s named for, June arrived with a little bit of everything in the carton — three distinct flavors stacked in the same tub, none of them quite bleeding into the others. So let’s take them one scoop at a time.",
+    "content": "# Neapolitan Shake\n\nLike the dessert it’s named for, June arrived with a little bit of everything in the carton — three distinct flavors stacked in the same tub, none of them quite bleeding into the others. So let’s take them one scoop at a time.\n\n![](/blog/june-2026-illustration.png)\n\n## The first scoop: the Fed\n\nThe June FOMC was almost aggressively uneventful — no hike, no cut, no news, and, more pointedly, no responsibility. By “no responsibility” I mean that Chair Warsh made it plain that forward guidance is over under his administration, and that communication from the Fed will be deliberately limited going forward. Doesn’t that remind you of Greenspan? Who’s Greenspan? Yes — exactly. That was last century.\n\nI’ll say this without hedging: I disagree with this reform, fully. The old-school, let-the-market-find-its-own-efficiency philosophy of central banking simply does not map onto the era we’re actually in. The market is an order of magnitude more complex than it was during the years when studied opacity passed for wisdom — more reflexive, more leveraged, more wired to every syllable. Cutting the cord and calling it discipline assumes the market is steered and ready for the new jungle. I’m not at all sure it is.\n\n## The second scoop: the data\n\nBoth CPI and PCE came in fractionally cooler than expected — not dramatically, but enough to take some heat out of the room. The hike chorus, predictably, has started warming up again. I highly doubt it. If hikes were genuinely on the table, I don’t believe they’d arrive before the midterms. Some songs only get sung after the votes are counted.\n\n## The third scoop: the book\n\nThis is where June actually earned its keep.\n\n$NOK gave us the run-up we’d been waiting for, and we took the profit — and then we stepped right back in. We think the name is primed for a revaluation after earnings on July 23rd. The math is uncomplicated: even before a single AI-RAN check clears the account, $NOK ought to be trading at least half of $CIEN’s P/E. It currently isn’t, and that gap is the trade.\n\n$ORCL, by contrast, did not have a good month. In fact it had its worst month since the dot-com bust — a genuinely ugly tape. Why? Because we all hate dilution, and Oracle handed the market a $20 billion equity offering to chew on. But let’s think this through instead of flinching at it. Why do they keep diluting? That’s exactly the catch. You don’t raise that kind of money to tread water; you raise it because the buildout in front of you is too large and too contracted to fund any other way. The dilution everyone is recoiling from is, read correctly, a tell about the size of the opportunity. We remain long $ORCL and we took our position into the weakness. We think this is close to a perfect entry for a long play — and one that should benefit from the rebalancing tailwind that increasingly favors the $IGV software complex.\n\n## And dessert\n\nI expect the Independence Day rally to show up roughly on schedule, the way it usually does, now that quarter-end and the bulk of rebalancing are behind us. The rest of July, though, reads like a genuine mystery. My base case is a bumpy uptrend through the back half of the year — the kind of grinding, two-steps-up-one-step-back climb we lived through in 2021. The direction is up. The ride is not smooth.\n\nBuckle up.\n\n— Atros W.M.\n\n> ## © ATROS TECH INC.\n",
+    "lang": "en"
+  },
+  {
     "title": "押注",
     "date": "May 31, 2026",
     "slug": "14",
