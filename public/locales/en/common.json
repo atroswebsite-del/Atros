@@ -28,11 +28,14 @@
     "content": "Leveraging our founders' extensive industry experience, we offer unparalleled access to exclusive venture capital deals, including elite investments like X.AI and SpaceX by Elon Musk, Claude by Google, and OpenAI by Sam Altman. Our alternative investment opportunities extend beyond the VC market, encompassing prime real estate and rare collector's items. Most importantly, we present our proprietary flagship fund, exclusively available to high-net-worth clients, providing access to the most coveted investment prospects."
   },
   "text_founders": {
-    "title": "MEET OUR FOUNDERS",
-    "first": "We are Mao Cheng, Simo Wu, and Zhuo Chen—a team committed to making wealth management smarter, more accessible, and built for the modern investor. With backgrounds at McKinsey, Goldman Sachs, TikTok, and Meta, we blend finance and technology to create investment strategies that thrive in today's dynamic market.",
-    "second": "Educated at Fudan University, Tongji University, and UC Berkeley, with two PhDs among us, we combine deep academic rigor with real-world expertise. This unique foundation enables us to navigate investments with precision, balancing risk and opportunity to drive meaningful results.",
-    "third": "Beyond traditional strategies, our extensive network in venture capital grants access to exclusive startup opportunities—the kind that rarely reach the public eye. From fintech and AI to groundbreaking innovations, we connect our clients with investments that have real potential.",
-    "fourth": "At our core, we believe wealth management should be strategic, transparent, and tailored to your goals—without unnecessary complexity. Let's build something great, together."
+    "title": "MEET OUR PARTNERS",
+    "na_region": "North America",
+    "na_name": "Mao Cheng, Simo Wu, Zhuo Chen.",
+    "na_body": "Between us: McKinsey, Goldman, TikTok, Meta; degrees from Fudan, Tongji, and Berkeley; two PhDs; and zero patience for strategies that only work in a bull market. We blend finance and technology because the market got faster, more reflexive, more wired to every syllable — and most of the industry didn't. We read the plumbing, we take the position, and we tell you why in plain English before the print proves us right or wrong.",
+    "na_tagline": "Smart money, minus the mystique.",
+    "asia_region": "Asia",
+    "asia_name": "Siyuan F. Li",
+    "asia_body": "Siyuan joins ATROS with a career that reads across the full width of the market. She's worked inside the institutions that move Chinese finance — Guotai Haitong, CITIC, Guangfa Securities, PwC — and, more tellingly, the Securities Association of China, moving between the buy side and the sell side, between industry and the policy end where the rules get written before anyone trades on them. Berkeley and Columbia educated, she pairs that range with genuine analytical rigor — the kind that reads the topography, not just the price. Most people learn one corner of the market. She's worked most of them. That's what she brings to ATROS."
   },
   "selected_venture": "Selected Venture Capital Deals",
   "read_more": "READMORE",
