@@ -25,12 +25,14 @@ export default function BlogCard({
                           xl:px-[30px] xl:pt-[30px] xl:pb-[30px]
                          ">
             <div className="flex flex-row">
-              <div className="relative aspect-[345/496] xl:aspect-[345/496] overflow-hidden 
-                              rounded-20 border-gray-0 border-[1px] 
-                              w-[245px] xl:w-[219px]">
-                <Image src={coverImage} alt="" fill className="object-cover" />
-              </div>
-              <div className="flex-1 flex flex-col justify-start ml-[30px] xl:ml-[25px]">
+              {coverImage ? (
+                <div className="relative aspect-[345/496] xl:aspect-[345/496] overflow-hidden 
+                                rounded-20 border-gray-0 border-[1px] 
+                                w-[245px] xl:w-[219px]">
+                  <Image src={coverImage} alt="" fill className="object-cover" />
+                </div>
+              ) : null}
+              <div className={`flex-1 flex flex-col justify-start ${coverImage ? 'ml-[30px] xl:ml-[25px]' : ''}`}>
                 <span className="text-[32px] xl:text-[28px] font-xbold text-gray-1">
                   {title}
                 </span>
@@ -83,11 +85,13 @@ export default function BlogCard({
           <div className="w-full mx-auto flex-col justify-start overflow-hidden
                         lg:pb-[32px] md:pb-md-16
                       bg-white-0 lg:rounded-40 md:rounded-20 border-gray-0 border-[1px]">
-            <div className="relative overflow-hidden border-gray-0 border-b-[1px]
-                              lg:aspect-[930/500] md:aspect-[343/184] 
-                              w-full lg:h-[500px] md:h-md-184">
-              <Image src={coverImage} alt="" fill className="object-cover" />
-            </div>
+            {coverImage ? (
+              <div className="relative overflow-hidden border-gray-0 border-b-[1px]
+                                lg:aspect-[930/500] md:aspect-[343/184] 
+                                w-full lg:h-[500px] md:h-md-184">
+                <Image src={coverImage} alt="" fill className="object-cover" />
+              </div>
+            ) : null}
             <div className="w-full 
                               lg:pl-[calc(100%/6)] lg:pr-[30px] 
                               lg:mt-[64px] md:mt-md-24 
