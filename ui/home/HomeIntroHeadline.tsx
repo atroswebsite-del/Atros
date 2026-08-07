@@ -1,12 +1,17 @@
 'use client';
 
 import { useI18n } from '@/components/I18nContext';
+import { useRevealOnScroll } from '@/hooks/useRevealOnScroll';
 
 export default function HomeIntroHeadline() {
   const { locale } = useI18n();
+  const revealRef = useRevealOnScroll<HTMLDivElement>({ y: 28, duration: 0.9 });
 
   return (
-    <div className="text-center mt-[130px] xl:mt-[80px] lg:mt-[100px] md:mt-md-60">
+    <div
+      ref={revealRef}
+      className="text-center mt-[130px] xl:mt-[80px] lg:mt-[100px] md:mt-md-60"
+    >
       {locale === 'en' ? (
         <>
           <a

@@ -14,15 +14,16 @@
     "singleQuote": true
   },
   "dependencies": {
-    "dat.gui": "^0.7.9",
-    "gsap": "^3.12.5",
+    "@gsap/react": "^2.1.2",
     "clsx": "2.0.0",
+    "dat.gui": "^0.7.9",
     "encoding": "0.1.13",
+    "gray-matter": "^4.0.3",
+    "gsap": "^3.12.5",
     "next": "13.5.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^10.0.0",
-    "gray-matter": "^4.0.3",
     "three": "^0.167.0"
   },
   "devDependencies": {
@@ -38,9 +39,9 @@
     "eslint": "8.53.0",
     "eslint-config-next": "13.5.6",
     "postcss": "^8.4.31",
-    "raw-loader": "^4.0.2",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
+    "raw-loader": "^4.0.2",
     "tailwindcss": "^3.3.5",
     "typescript": "5.2.2"
   }
